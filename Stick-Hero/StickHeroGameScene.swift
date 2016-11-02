@@ -374,14 +374,24 @@ private extension StickHeroGameScene {
     func loadTip() {
         let tip = SKLabelNode(fontNamed: "HelveticaNeue-Bold")
         tip.name = StickHeroGameSceneChildName.TipName.rawValue
-        tip.text = "将手放在屏幕使竿变长"
-        tip.position = CGPoint(x: 0, y: DefinedScreenHeight / 2 - 350)
+        tip.text = "Hold your finger on screen"
+        tip.position = CGPoint(x: 0, y: DefinedScreenHeight / 2 - 360)
         tip.fontColor = SKColor.black
         tip.fontSize = 52
         tip.zPosition = StickHeroGameSceneZposition.tipZposition.rawValue
         tip.horizontalAlignmentMode = .center
+        
+        let tip2 = SKLabelNode(fontNamed: "HelveticaNeue-Bold")
+        tip2.name = StickHeroGameSceneChildName.TipName.rawValue
+        tip2.text = "to stretch out the stick"
+        tip2.position = CGPoint(x: 0, y: DefinedScreenHeight / 2 - 410)
+        tip2.fontColor = SKColor.black
+        tip2.fontSize = 52
+        tip2.zPosition = StickHeroGameSceneZposition.tipZposition.rawValue
+        tip2.horizontalAlignmentMode = .center
     
         addChild(tip)
+        addChild(tip2)
     }
     
     func loadPerfect() {
@@ -394,7 +404,7 @@ private extension StickHeroGameScene {
 
         guard let _ = childNode(withName: StickHeroGameSceneChildName.PerfectName.rawValue) as! SKLabelNode? else {
             let perfect = SKLabelNode(fontNamed: "Arial")
-            perfect.text = "Perfect +1"
+            perfect.text = "PERFECT! +1"
             perfect.name = StickHeroGameSceneChildName.PerfectName.rawValue
             perfect.position = CGPoint(x: 0, y: -100)
             perfect.fontColor = SKColor.black
