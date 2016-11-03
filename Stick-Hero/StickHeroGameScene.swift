@@ -51,6 +51,9 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
             if (newValue == 1) {
                 let tip = childNode(withName: StickHeroGameSceneChildName.TipName.rawValue) as? SKLabelNode
                 tip?.run(SKAction.fadeAlpha(to: 0, duration: 0.4))
+                
+                let tip2 = childNode(withName: StickHeroGameSceneChildName.TipName2.rawValue) as? SKLabelNode
+                tip2?.run(SKAction.fadeAlpha(to: 0, duration: 0.4))
             }
         }
     }
@@ -382,7 +385,7 @@ private extension StickHeroGameScene {
         tip.horizontalAlignmentMode = .center
         
         let tip2 = SKLabelNode(fontNamed: "HelveticaNeue-Bold")
-        tip2.name = StickHeroGameSceneChildName.TipName.rawValue
+        tip2.name = StickHeroGameSceneChildName.TipName2.rawValue
         tip2.text = "to stretch out the stick"
         tip2.position = CGPoint(x: 0, y: DefinedScreenHeight / 2 - 410)
         tip2.fontColor = SKColor.black

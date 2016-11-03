@@ -19,6 +19,7 @@ enum StickHeroGameSceneChildName : String {
     case StackMidName = "stack_mid"
     case ScoreName = "score"
     case TipName = "tip"
+    case TipName2 = "tip2"
     case PerfectName = "perfect"
     case GameOverLayerName = "over"
     case RetryButtonName = "retry"
